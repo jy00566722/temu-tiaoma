@@ -74,9 +74,8 @@
           </div>
         </div>
         <div style="margin-top: 20px;">
-          <button class="btn btn-primary" @click="selectAllVisible">全选当前</button>
-          <button class="btn" @click="deselectAllVisible" style="margin-left: 10px;">取消全选</button>
-          <button class="btn" @click="clearFilters" style="margin-left: 10px;">清除筛选</button>
+            <button class="btn" @click="clearFiltersAndSetZero" style="margin-left: 10px;">清除筛选</button>
+            <button class="btn" @click="setAllToZero" style="margin-left: 10px;">全部置0</button>
         </div>
       </div>
 
@@ -88,20 +87,35 @@
     </h3>
     <div class="product-grid-new">
         <div v-for="group in filteredAndGroupedData" :key="group.representative.skcCode" class="product-group-item">
-            <div class="group-header" @click="toggleSkcExpansion(group.representative.skcCode)">
-                <input 
-                    type="checkbox" 
-                    class="product-checkbox"
-                    @click.stop 
-                    @change="handleSkcGroupCheck(group.items, $event)"
-                />
-                <img v-if="group.representative.imagePath" :src="group.representative.imagePath" class="product-image-small">
-                <div class="group-info">
-                    <strong>SKC: {{ group.representative.skcCode }}</strong>
-                    <span>{{ group.representative.storeCode }} / {{ group.representative.chineseColor }}</span>
-                </div>
-                <span class="expand-icon">{{ expandedSkcs.has(group.representative.skcCode) ? '收起' : '展开' }}</span>
-            </div>
+<div class="group-header" @click="toggleSkcExpansion(group.representative.skcCode)">
+    <input 
+        type="checkbox" 
+        class="product-checkbox"
+        @click.stop 
+        @change="handleSkcGroupCheck(group.items, $event)"
+    />
+    <img v-if="group.representative.imagePath" :src="group.representative.imagePath" class="product-image-small">
+    <div class="group-info">
+        <strong>SKC: {{ group.representative.skcCode }}</strong>
+        <span>{{ group.representative.storeCode }} / {{ group.representative.chineseColor }}</span>
+    </div>
+    <div class="batch-fill" @click.stop>
+        <input 
+            type="number" 
+            v-model.number="batchQuantities[group.representative.skcCode]" 
+            min="0"
+            class="batch-quantity-input" 
+            placeholder="批量数量"
+        >
+        <button 
+            class="btn-small" 
+            @click="applyBatchQuantity(group.items, group.representative.skcCode)"
+        >
+            批量填充
+        </button>
+    </div>
+    <span class="expand-icon">{{ expandedSkcs.has(group.representative.skcCode) ? '收起' : '展开' }}</span>
+</div>
             
             <div v-if="expandedSkcs.has(group.representative.skcCode)" class="sku-list">
                 <div v-for="item in group.items" :key="item.sku" class="sku-item">
@@ -127,7 +141,6 @@
         </div>
     </div>
 </div>
-
       <div class="card">
         <h3>🏷️ 标签生成</h3>
         <button class="btn btn-success" @click="generateBarcodes" :disabled="isProcessing || selectedSkcsCount === 0">
@@ -143,7 +156,7 @@
       </div>
 
       <div v-if="generatedLabels.length > 0" class="card">
-        <h3>👀 标签预览 ({{ totalLabelCount }}个)</h3>
+        <h3>👀 标签预览 ({{ stats.labelTotalCount }}个)</h3>
         <div id="barcodePreview" ref="barcodePreviewContainer">
           <template v-for="(label, index) in generatedLabels" :key="index">
             <div v-if="label.type === 'separator'" class="separator-page">
@@ -180,8 +193,9 @@ import jsPDF from 'jspdf';
 // --- 状态变量 ---
 const allData = ref([]); // 存储所有商品数据，现在每个商品对象将包含 quantity 属性
 const expandedSkcs = reactive(new Set()); // 跟踪哪些SKC分组是展开状态
+const batchQuantities = reactive({}); // 新增：存储每个SKC的批量填充数量
+const isDragging = ref(false); // 添加这一行来定义 isDragging 变量
 
-//  --  移除了 selectedSkcs 和旧的 quantities 变量 --
 
 const fileInput = ref(null);
 const isProcessing = ref(false);
@@ -257,6 +271,27 @@ watch(generatedLabels, async (newLabels) => {
 
 
 // --- 方法 ---
+
+// 添加 handleDrop 函数
+function handleDrop(event) {
+  isDragging.value = false;
+  event.preventDefault();
+  if (event.dataTransfer.files.length) {
+    processFile(event.dataTransfer.files[0]);
+  }
+}
+
+// 新增：批量填充方法
+function applyBatchQuantity(items, skcCode) {
+    const quantity = batchQuantities[skcCode];
+    if (quantity !== undefined && quantity >= 0) {
+        items.forEach(item => {
+            item.quantity = quantity;
+        });
+        // 可选：清空输入框
+        // batchQuantities[skcCode] = "";
+    }
+}
 
 // 1. processFile: 为每个SKU添加quantity属性
 function processFile(file) {
@@ -429,6 +464,22 @@ async function downloadPDF() {
 // 其他未修改的辅助函数
 function clearFilters() {
     filters.storeCode = ''; filters.skcCode = ''; filters.chineseColor = ''; filters.size = '';
+}
+// 新增：将所有已筛选的SKU数量设为0
+function setAllToZero() {
+    filteredAndGroupedData.value.forEach(group => {
+        group.items.forEach(item => {
+            item.quantity = 0;
+        });
+    });
+}
+
+// 新增：清除筛选并将所有SKU数量设为0
+function clearFiltersAndSetZero() {
+    clearFilters();
+    allData.value.forEach(item => {
+        item.quantity = 0;
+    });
 }
 function triggerFileInput() { fileInput.value.click(); }
 function handleFileChange(event) { if (event.target.files.length) processFile(event.target.files[0]); }
@@ -832,5 +883,34 @@ body {
 
 .quantity-input {
     width: 60px; /* 调整宽度 */
+}
+.batch-fill {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+}
+
+.batch-quantity-input {
+    width: 70px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: all 0.2s ease;
+}
+
+.btn-small:hover {
+    background: #764ba2;
 }
 </style>
