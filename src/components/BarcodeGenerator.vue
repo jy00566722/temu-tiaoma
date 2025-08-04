@@ -108,7 +108,9 @@
                     <div class="sku-info">
                         <span><strong>SKU:</strong> {{ item.sku }}</span>
                         <span><strong>货号:</strong> {{ item.skuCode }}</span>
+                        <span><strong>颜色:</strong> {{ item.chineseColor }}</span>
                         <span><strong>尺码:</strong> {{ item.size }}</span>
+                        <span><strong>条码:</strong> {{ item.barcode }}</span>
                     </div>
                     <div class="sku-quantity">
                         <label>数量:</label>
@@ -218,7 +220,7 @@ const filteredAndGroupedData = computed(() => {
   const lowerSkcCode = filters.skcCode.toLowerCase();
   const filtered = allData.value.filter(item => {
     return (!filters.storeCode || item.storeCode === filters.storeCode) &&
-           (!filters.skcCode || item.skcCode.toLowerCase().includes(lowerSkcCode)) &&
+           (!filters.skcCode || (item.skcCode && String(item.skcCode).toLowerCase().includes(lowerSkcCode))) &&
            (!filters.chineseColor || item.chineseColor === filters.chineseColor) &&
            (!filters.size || item.size === filters.size);
   });
@@ -275,7 +277,7 @@ function processFile(file) {
         englishColor: item['英文颜色'] || '',
         size: item['尺码'] || '',
         barcode: item['条码编码'] || '',
-        quantity: 1, // <--- 核心改动：为每个SKU默认数量为1
+        quantity: 0, // <--- 核心改动：为每个SKU默认数量为1
       }));
 
       clearFilters();
