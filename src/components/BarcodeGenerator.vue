@@ -357,7 +357,7 @@ async function downloadPDF() {
     }
 
     isProcessing.value = true;
-    progress.text = '开始生成矢量PDF...';
+    // progress.text = '开始生成矢量PDF...';
 
     const pdf = new jsPDF({
         orientation: 'landscape',
@@ -380,32 +380,38 @@ async function downloadPDF() {
             pdf.setFillColor(0, 0, 0);
             pdf.rect(0, 0, 70, 20, 'F');
             pdf.setTextColor(255, 255, 255);
-            pdf.setFontSize(14);
+            pdf.setFontSize(12);
             pdf.text(`Color Separator - ${label.color}`, 35, 11, { align: 'center' });
         } else {
             const item = label.data;
+            
+            // 添加边框，距离页面边缘2mm
+            pdf.setDrawColor(0, 0, 0);
+            pdf.setLineWidth(0.2);
+            pdf.rect(2, 2, 66, 16);
+            
             pdf.setTextColor(0, 0, 0);
-            pdf.setFontSize(8);
-            pdf.text(item.skuCode, 2, 4);
-            pdf.text(`${item.englishColor} Color-${item.size}`, 68, 4, { align: 'right' });
+            pdf.setFontSize(6); 
+            pdf.text(item.skuCode, 3, 4); 
+            pdf.text(`${item.englishColor}-${item.size}`, 66, 4, { align: 'right' }); // 调整坐标
 
             if (item.barcode) {
                 // --- 核心修复：使用canvas作为中介 ---
                 const canvas = document.createElement('canvas');
                 JsBarcode(canvas, item.barcode, {
                     format: "CODE128",
-                    width: 2.5, // 增加条码宽度以提高在高分辨率canvas上的清晰度
+                    width: 3, // 增加条码宽度以提高在高分辨率canvas上的清晰度
                     height: 60,
                     displayValue: false,
                     margin: 0,
                 });
                 const barcodeImage = canvas.toDataURL('image/png');
-                pdf.addImage(barcodeImage, 'PNG', 5, 6, 60, 8); // 将canvas图像添加到PDF
+                pdf.addImage(barcodeImage, 'PNG', 7, 6, 58, 8); 
             }
 
-            pdf.setFontSize(7);
-            pdf.text(item.sku+"", 2, 18);
-            pdf.text('Made In China', 68, 18, { align: 'right' });
+            pdf.setFontSize(6); 
+            pdf.text(item.sku+"", 3, 17); 
+            pdf.text('Made In China', 66, 17, { align: 'right' }); // 调整坐标
         }
         
         await new Promise(resolve => setTimeout(resolve, 5));
