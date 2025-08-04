@@ -1,0 +1,2488 @@
+[
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 11187271363,
+      "labelCode": 66148813293,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-28"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15130,
+        "specName": "28"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15130,
+          "specName": "28"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 23651342029,
+      "labelCode": 56489312039,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-38"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15133,
+        "specName": "38"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15133,
+          "specName": "38"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 89838132489,
+      "labelCode": 93581370761,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-29"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16127,
+        "specName": "29"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16127,
+          "specName": "29"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 10918073478,
+      "labelCode": 43533063087,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-37"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16129,
+        "specName": "37"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16129,
+          "specName": "37"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 86515049550,
+      "labelCode": 31643833997,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-29"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16127,
+        "specName": "29"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16127,
+          "specName": "29"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 87475013178,
+      "labelCode": 95114572673,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-28"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15130,
+        "specName": "28"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15130,
+          "specName": "28"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 83455775496,
+      "labelCode": 88852834329,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-30"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15131,
+        "specName": "30"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15131,
+          "specName": "30"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 79328940001,
+      "labelCode": 43865801538,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-32"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16134,
+        "specName": "32"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16134,
+          "specName": "32"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 81467899665,
+      "labelCode": 58737954519,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-35"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15132,
+        "specName": "35"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15132,
+          "specName": "35"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 76761115861,
+      "labelCode": 64750731912,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-34"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15136,
+        "specName": "34"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15136,
+          "specName": "34"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 47294484421,
+      "labelCode": 46595900458,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-31"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16133,
+        "specName": "31"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16133,
+          "specName": "31"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 38395521382,
+      "labelCode": 81422136677,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-33"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15135,
+        "specName": "33"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15135,
+          "specName": "33"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 15094319822,
+      "labelCode": 71269006306,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-34"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15136,
+        "specName": "34"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15136,
+          "specName": "34"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 83685799088,
+      "labelCode": 82136109664,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-37"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16129,
+        "specName": "37"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16129,
+          "specName": "37"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 41395494839,
+      "labelCode": 48407170261,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-30"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15131,
+        "specName": "30"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15131,
+          "specName": "30"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 38118314874,
+      "labelCode": 59840446163,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-38"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15133,
+        "specName": "38"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15133,
+          "specName": "38"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 67064753713,
+      "labelCode": 24342048649,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-36"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16128,
+        "specName": "36"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16128,
+          "specName": "36"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 20970848792,
+      "labelCode": 57780661207,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-36"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16128,
+        "specName": "36"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16128,
+          "specName": "36"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 84768979828,
+      "labelCode": 47230908574,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-33"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15135,
+        "specName": "33"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15135,
+          "specName": "33"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 19210471760,
+      "labelCode": 87917043098,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-32"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16134,
+        "specName": "32"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16134,
+          "specName": "32"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 83034454558,
+      "labelCode": 36560142341,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-Dark Grey-31"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/beaa6fca-2929-4eaa-836b-e147b03b9c27.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 15071,
+        "specName": "深灰色"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 16133,
+        "specName": "31"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 15071,
+          "specName": "Dark Grey"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 16133,
+          "specName": "31"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  },
+  {
+    "labelCodeVO": {
+      "supplierId": 634418224421330,
+      "productId": 3773091804,
+      "productSkcId": 14043798607,
+      "productSkuId": 24503907953,
+      "labelCode": 55707706275,
+      "skcExtCode": "8590",
+      "skuExtCode": "8590-XQ-BlackOrange-35"
+    },
+    "productId": 3773091804,
+    "productName": "男童休闲运动鞋，户外跑步、慢步休闲鞋，简约设计，时尚百搭，鞋内里柔软舒适休闲男童鞋",
+    "leafCat": {
+      "catId": 30863,
+      "catName": "男童休闲运动鞋",
+      "catEnName": null,
+      "catType": null
+    },
+    "displayImage": "https://img.kwcdn.com/product/fancy/28935ac0-8ce8-445b-b118-ecba9a35e621.jpg",
+    "productSkcSpecList": [
+      {
+        "parentSpecId": 0,
+        "parentSpecName": "",
+        "specId": 0,
+        "specName": ""
+      }
+    ],
+    "productSkcSpecI18nMap": {
+      "en": []
+    },
+    "productSkuSpecList": [
+      {
+        "parentSpecId": 1001,
+        "parentSpecName": "颜色",
+        "specId": 44692,
+        "specName": "黑桔"
+      },
+      {
+        "parentSpecId": 3001,
+        "parentSpecName": "尺码",
+        "specId": 15132,
+        "specName": "35"
+      }
+    ],
+    "productSkuSpecI18nMap": {
+      "en": [
+        {
+          "parentSpecId": 1001,
+          "parentSpecName": "Color",
+          "specId": 44692,
+          "specName": "Black Orange"
+        },
+        {
+          "parentSpecId": 3001,
+          "parentSpecName": "Size",
+          "specId": 15132,
+          "specName": "35"
+        }
+      ]
+    },
+    "productFragileLabelAttr": {
+      "isFragile": false
+    },
+    "productOrigin": {
+      "countryShortName": "CN",
+      "countryName": "China",
+      "region2Id": 43000000000004
+    },
+    "bindSiteIds": null,
+    "supplierSourceType": 1000,
+    "productCerts": [
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 48,
+        "checkMode": 1,
+        "auditStatus": 1
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 2,
+        "checkMode": 1,
+        "auditStatus": 4
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 108,
+        "checkMode": 2,
+        "auditStatus": 2
+      },
+      {
+        "productId": 3773091804,
+        "supplierId": 634418224421330,
+        "certType": 109,
+        "checkMode": 1,
+        "auditStatus": 2
+      }
+    ],
+    "categoryLabels": [],
+    "hasWarningPrompt": null,
+    "hitNewStyle": false,
+    "labelRequirement": {
+      "needCosmeticLabel": false,
+      "labelType": null,
+      "cosmeticLabelStatus": null,
+      "cosmeticLabelSize": null,
+      "cosmeticLabelMissingInfoList": [],
+      "needComplianceLabel": true,
+      "uploadedComplianceLabel": false
+    }
+  }
+]
