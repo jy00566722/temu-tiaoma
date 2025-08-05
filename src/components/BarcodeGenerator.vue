@@ -87,7 +87,7 @@
     </h3>
     <div class="product-grid-new">
         <div v-for="group in filteredAndGroupedData" :key="group.representative.skcCode" class="product-group-item">
-<div class="group-header" @click="toggleSkcExpansion(group.representative.skcCode)">
+        <div class="group-header" @click="toggleSkcExpansion(group.representative.skcCode)">
     <input 
         type="checkbox" 
         class="product-checkbox"
@@ -193,7 +193,7 @@ import jsPDF from 'jspdf';
 // --- 状态变量 ---
 const allData = ref([]); // 存储所有商品数据，现在每个商品对象将包含 quantity 属性
 const expandedSkcs = reactive(new Set()); // 跟踪哪些SKC分组是展开状态
-const batchQuantities = reactive({}); // 新增：存储每个SKC的批量填充数量
+const batchQuantities = reactive({}); // 存储每个SKC的批量填充数量
 const isDragging = ref(false); // 添加这一行来定义 isDragging 变量
 
 
@@ -242,7 +242,7 @@ async function loadAndRegisterFont(pdf) {
     }
 }
 
-// 新增：计算需要打印的SKU总数和标签总数
+//计算需要打印的SKU总数和标签总数
 const stats = computed(() => {
     let skuToPrintCount = 0;
     let labelTotalCount = 0;
@@ -261,7 +261,6 @@ const sizeOptions = computed(() => [...new Set(allData.value.map(item => item.si
 
 // filteredAndGroupedData 逻辑保持，用于UI展示
 const filteredAndGroupedData = computed(() => {
-  // ... (此函数内容与之前版本相同，无需修改)
   const lowerSkcCode = filters.skcCode.toLowerCase();
   const filtered = allData.value.filter(item => {
     return (!filters.storeCode || item.storeCode === filters.storeCode) &&
@@ -300,8 +299,6 @@ watch(generatedLabels, async (newLabels) => {
   });
 }, { deep: true });
 
-
-// --- 方法 ---
 
 // 添加 handleDrop 函数
 function handleDrop(event) {
