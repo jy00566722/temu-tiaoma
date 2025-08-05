@@ -5,183 +5,239 @@
       <p>支持Excel数据导入、批量生成条码标签、PDF导出</p>
     </div>
 
-    <div class="card">
-      <h3>📁 数据导入</h3>
-      <div
-        class="upload-area"
-        @click="triggerFileInput"
-        @dragover.prevent="isDragging = true"
-        @dragleave.prevent="isDragging = false"
-        @drop.prevent="handleDrop"
-        :class="{ dragover: isDragging }"
-      >
-        <div class="upload-icon">📄</div>
-        <div class="upload-text">点击选择Excel文件或拖拽文件到此处</div>
-        <div style="color: #999; font-size: 0.9em;">支持 .xlsx, .xls 格式</div>
-      </div>
-      <input type="file" ref="fileInput" class="file-input" accept=".xlsx,.xls" @change="handleFileChange">
-    </div>
+    <!-- 三列布局 -->
+    <div class="three-column-layout">
+      <!-- 左列：数据输入和功能 -->
+      <div class="column left-column">
+        <div class="card">
+          <h3>📁 数据导入</h3>
+          <div
+            class="upload-area"
+            @click="triggerFileInput"
+            @dragover.prevent="isDragging = true"
+            @dragleave.prevent="isDragging = false"
+            @drop.prevent="handleDrop"
+            :class="{ dragover: isDragging }"
+          >
+            <div class="upload-icon">📄</div>
+            <div class="upload-text">点击选择Excel文件或拖拽文件到此处</div>
+            <div style="color: #999; font-size: 0.9em;">支持 .xlsx, .xls 格式</div>
+          </div>
+          <input type="file" ref="fileInput" class="file-input" accept=".xlsx,.xls" @change="handleFileChange">
+        </div>
 
-    <template v-if="allData.length > 0">
-      <div class="data-stats">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number">{{ allData.length }}</span>
-            <span class="stat-label">总商品数</span>
+        <template v-if="allData.length > 0">
+          <div class="data-stats">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">{{ allData.length }}</span>
+                <span class="stat-label">总商品数</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">{{ selectedSkcsCount }}</span>
+                <span class="stat-label">已选SKC组</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">{{ storeOptions.length }}</span>
+                <span class="stat-label">店铺数</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">{{ colorOptions.length }}</span>
+                <span class="stat-label">颜色数</span>
+              </div>
+            </div>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">{{ selectedSkcsCount }}</span>
-            <span class="stat-label">已选SKC组</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">{{ storeOptions.length }}</span>
-            <span class="stat-label">店铺数</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">{{ colorOptions.length }}</span>
-            <span class="stat-label">颜色数</span>
-          </div>
-        </div>
-      </div>
 
-      <div class="card">
-        <h3>🔍 数据筛选</h3>
-        <div class="filters">
-          <div class="filter-group">
-            <label>店铺</label>
-            <select v-model="filters.storeCode">
-              <option value="">全部店铺</option>
-              <option v-for="store in storeOptions" :key="store" :value="store">{{ store }}</option>
-            </select>
+          <div class="card">
+            <h3>🏷️ 标签生成</h3>
+            <button class="btn btn-primary" @click="downloadPDF" :disabled="isProcessing || printList.length === 0" style="margin-left: 10px;">
+              {{ isProcessing ? '生成中...' : '下载PDF' }}
+            </button>
+            <div v-if="isProcessing" class="progress-bar" style="margin-top: 15px;">
+              <div class="progress-fill" :style="{ width: progress.value + '%' }"></div>
+            </div>
+            <div v-if="progress.text" class="loading" style="display: block;">{{ progress.text }}</div>
           </div>
-          <div class="filter-group">
-            <label>SKC货号</label>
-            <input type="text" v-model.trim="filters.skcCode" placeholder="输入SKC货号">
-          </div>
-          <div class="filter-group">
-            <label>颜色</label>
-            <select v-model="filters.chineseColor">
-              <option value="">全部颜色</option>
-              <option v-for="color in colorOptions" :key="color" :value="color">{{ color }}</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label>尺码</label>
-            <select v-model="filters.size">
-              <option value="">全部尺码</option>
-              <option v-for="size in sizeOptions" :key="size" :value="size">{{ size }}</option>
-            </select>
-          </div>
-        </div>
-        <div style="margin-top: 20px;">
-            <button class="btn" @click="clearFiltersAndSetZero" style="margin-left: 10px;">清除筛选</button>
-            <button class="btn" @click="setAllToZero" style="margin-left: 10px;">全部置0</button>
-        </div>
+        </template>
       </div>
 
-<div id="productSection" class="card">
-    <h3>
-        📦 商品列表 ({{ filteredAndGroupedData.length }} 组) | 
-        <span style="color:#28a745">待打印SKU: {{ stats.skuToPrintCount }}</span> | 
-        <span style="color:#667eea">标签总数: {{ stats.labelTotalCount }}</span>
-    </h3>
-    <div class="product-grid-new">
-        <div v-for="group in filteredAndGroupedData" :key="group.representative.skcCode" class="product-group-item">
-        <div class="group-header" @click="toggleSkcExpansion(group.representative.skcCode)">
-    <input 
-        type="checkbox" 
-        class="product-checkbox"
-        @click.stop 
-        @change="handleSkcGroupCheck(group.items, $event)"
-    />
-    <img v-if="group.representative.imagePath" :src="group.representative.imagePath" class="product-image-small">
-    <div class="group-info">
-        <strong>SKC: {{ group.representative.skcCode }}</strong>
-        <span>{{ group.representative.storeCode }} / {{ group.representative.chineseColor }}</span>
-    </div>
-    <div class="batch-fill" @click.stop>
-        <input 
-            type="number" 
-            v-model.number="batchQuantities[group.representative.skcCode]" 
-            min="0"
-            class="batch-quantity-input" 
-            placeholder="批量数量"
-        >
-        <button 
-            class="btn-small" 
-            @click="applyBatchQuantity(group.items, group.representative.skcCode)"
-        >
-            批量填充
-        </button>
-    </div>
-    <span class="expand-icon">{{ expandedSkcs.has(group.representative.skcCode) ? '收起' : '展开' }}</span>
-</div>
-            
-            <div v-if="expandedSkcs.has(group.representative.skcCode)" class="sku-list">
-                <div v-for="item in group.items" :key="item.sku" class="sku-item">
-                    <div class="sku-info">
-                        <span><strong>SKU:</strong> {{ item.sku }}</span>
-                        <span><strong>条码:</strong> {{ item.barcode }}</span>
-                        <span><strong>货号:</strong> {{ item.skuCode }}</span>
-                        <span><strong>颜色:</strong> {{ item.chineseColor }}</span>
-                        <span><strong>尺码:</strong> {{ item.size }}</span>
+      <!-- 中列：筛选和商品列表 -->
+      <div class="column middle-column">
+        <template v-if="allData.length > 0">
+          <div class="card">
+            <h3>🔍 数据筛选</h3>
+            <div class="filters">
+              <div class="filter-group">
+                <label>店铺</label>
+                <select v-model="filters.storeCode">
+                  <option value="">全部店铺</option>
+                  <option v-for="store in storeOptions" :key="store" :value="store">{{ store }}</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>SKC货号</label>
+                <input type="text" v-model.trim="filters.skcCode" placeholder="输入SKC货号">
+              </div>
+              <div class="filter-group">
+                <label>颜色</label>
+                <select v-model="filters.chineseColor">
+                  <option value="">全部颜色</option>
+                  <option v-for="color in colorOptions" :key="color" :value="color">{{ color }}</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label>尺码</label>
+                <select v-model="filters.size">
+                  <option value="">全部尺码</option>
+                  <option v-for="size in sizeOptions" :key="size" :value="size">{{ size }}</option>
+                </select>
+              </div>
+            </div>
+            <div style="margin-top: 20px;">
+                <button class="btn" @click="clearFiltersAndSetZero" style="margin-left: 10px;">清除筛选</button>
+                <button class="btn" @click="setAllToZero" style="margin-left: 10px;">全部置0</button>
+            </div>
+          </div>
 
+          <div id="productSection" class="card">
+            <h3>
+                📦 商品列表 ({{ filteredAndGroupedData.length }} 组) | 
+                <span style="color:#28a745">待打印SKU: {{ stats.skuToPrintCount }}</span> | 
+                <span style="color:#667eea">标签总数: {{ stats.labelTotalCount }}</span>
+            </h3>
+            <div class="product-grid-new">
+                <div v-for="group in filteredAndGroupedData" :key="group.representative.skcCode" class="product-group-item">
+                  <div class="group-header" @click="toggleSkcExpansion(group.representative.skcCode)">
+                    <input 
+                        type="checkbox" 
+                        class="product-checkbox"
+                        @click.stop 
+                        @change="handleSkcGroupCheck(group.items, $event)"
+                    />
+                    <img v-if="group.representative.imagePath" :src="group.representative.imagePath" class="product-image-small">
+                    <div class="group-info">
+                        <strong>SKC: {{ group.representative.skcCode }}</strong>
+                        <span>{{ group.representative.storeCode }} / {{ group.representative.chineseColor }}</span>
                     </div>
-                    <div class="sku-quantity">
-                        <label>数量:</label>
+                    <div class="batch-fill" @click.stop>
                         <input 
                             type="number" 
-                            v-model.number="item.quantity" 
+                            v-model.number="batchQuantities[group.representative.skcCode]" 
                             min="0"
-                            class="quantity-input" 
-                            @click.stop
+                            class="batch-quantity-input" 
+                            placeholder="批量数量"
                         >
+                        <button 
+                            class="btn-small" 
+                            @click="applyBatchQuantity(group.items, group.representative.skcCode)"
+                        >
+                            批量填充
+                        </button>
+                        <button 
+                            class="btn-small btn-add" 
+                            @click="addToPrintList(group.items)"
+                        >
+                            加入待打印列表
+                        </button>
                     </div>
+                    <span class="expand-icon">{{ expandedSkcs.has(group.representative.skcCode) ? '收起' : '展开' }}</span>
+                  </div>
+                    
+                  <div v-if="expandedSkcs.has(group.representative.skcCode)" class="sku-list">
+                      <div v-for="item in group.items" :key="item.sku" class="sku-item">
+                          <div class="sku-info">
+                              <span><strong>SKU:</strong> {{ item.sku }}</span>
+                              <span><strong>条码:</strong> {{ item.barcode }}</span>
+                              <span><strong>货号:</strong> {{ item.skuCode }}</span>
+                              <span><strong>颜色:</strong> {{ item.chineseColor }}</span>
+                              <span><strong>尺码:</strong> {{ item.size }}</span>
+                          </div>
+                          <div class="sku-quantity">
+                              <label>数量:</label>
+                              <input 
+                                  type="number" 
+                                  v-model.number="item.quantity" 
+                                  min="0"
+                                  class="quantity-input" 
+                                  @click.stop
+                              >
+                          </div>
+                      </div>
+                  </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-      <div class="card">
-        <h3>🏷️ 标签生成</h3>
-        <button class="btn btn-success" @click="generateBarcodes" :disabled="isProcessing || selectedSkcsCount === 0">
-          {{ isProcessing ? '处理中...' : '生成条码标签' }}
-        </button>
-        <button class="btn btn-primary" @click="downloadPDF" :disabled="isProcessing || generatedLabels.length === 0" style="margin-left: 10px;">
-          {{ isProcessing ? '生成中...' : '下载PDF' }}
-        </button>
-        <div v-if="isProcessing" class="progress-bar" style="margin-top: 15px;">
-          <div class="progress-fill" :style="{ width: progress.value + '%' }"></div>
-        </div>
-        <div v-if="progress.text" class="loading" style="display: block;">{{ progress.text }}</div>
+          </div>
+        </template>
       </div>
 
-      <div v-if="generatedLabels.length > 0" class="card">
-        <h3>👀 标签预览 ({{ stats.labelTotalCount }}个)</h3>
-        <div id="barcodePreview" ref="barcodePreviewContainer">
-          <template v-for="(label, index) in generatedLabels" :key="index">
-            <div v-if="label.type === 'separator'" class="separator-page">
-              颜色分割线 - {{ label.color }}
-            </div>
-            <div v-else class="barcode-label">
-              <div class="barcode-content">
-                <div class="barcode-top">
-                  <span>{{ label.data.skuCode }}</span>
-                  <span>{{ label.data.englishColor }} Color-{{ label.data.size }}</span>
+      <!-- 右列：待打印列表 -->
+      <div class="column right-column">
+        <template v-if="allData.length > 0">
+          <div class="card">
+            <h3>🖨️ 待打印列表 ({{ printList.length }}个SKU)</h3>
+            <div class="print-list">
+              <div v-if="printList.length === 0" class="empty-list">
+                请从左侧添加商品到打印列表
+              </div>
+              <div v-for="(item, index) in printList" :key="index" class="print-item">
+                <div class="print-item-info">
+                  <div><strong>店铺:</strong> {{ item.storeCode }}</div>
+                  <div><strong>SKC:</strong> {{ item.skcCode }}</div>
+                  <div><strong>颜色:</strong> {{ item.chineseColor }}</div>
+                  <div><strong>尺码:</strong> {{ item.size }}</div>
+                  <div class="print-item-quantity">
+                    <strong>数量:</strong>
+                    <input 
+                      type="number" 
+                      v-model.number="item.quantity" 
+                      min="1"
+                      class="quantity-input-small" 
+                    >
+                  </div>
                 </div>
-                <div class="barcode-middle">
-                  <svg :id="`barcode-svg-${index}`"></svg>
-                </div>
-                <div class="barcode-bottom">
-                  <span>{{ label.data.sku }}</span>
-                  <span>Made In China</span>
+                <div class="print-item-actions">
+                  <button class="btn-small btn-delete" @click="removeFromPrintList(index)">
+                    删除
+                  </button>
                 </div>
               </div>
             </div>
-          </template>
-        </div>
+            <div class="print-actions" v-if="printList.length > 0">
+              <div class="print-total">总标签数: {{ printListTotalCount }}</div>
+              <button class="btn btn-success" @click="generateBarcodesFromPrintList" :disabled="isProcessing">
+                {{ isProcessing ? '处理中...' : '生成条码标签' }}
+              </button>
+            </div>
+          </div>
+
+          <div v-if="generatedLabels.length > 0" class="card">
+            <h3>👀 标签预览</h3>
+            <div id="barcodePreview" ref="barcodePreviewContainer">
+              <template v-for="(label, index) in generatedLabels" :key="index">
+                <div v-if="label.type === 'separator'" class="separator-page">
+                  颜色分割线 - {{ label.color }}
+                </div>
+                <div v-else class="barcode-label">
+                  <div class="barcode-content">
+                    <div class="barcode-top">
+                      <span>{{ label.data.skuCode }}</span>
+                      <span>{{ label.data.englishColor }} Color-{{ label.data.size }}</span>
+                    </div>
+                    <div class="barcode-middle">
+                      <svg :id="`barcode-svg-${index}`"></svg>
+                    </div>
+                    <div class="barcode-bottom">
+                      <span>{{ label.data.sku }}</span>
+                      <span>Made In China</span>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </template>
       </div>
-    </template>
+    </div>
   </div>
 </template>
 
@@ -195,7 +251,8 @@ import jsPDF from 'jspdf';
 const allData = ref([]); // 存储所有商品数据，现在每个商品对象将包含 quantity 属性
 const expandedSkcs = reactive(new Set()); // 跟踪哪些SKC分组是展开状态
 const batchQuantities = reactive({}); // 存储每个SKC的批量填充数量
-const isDragging = ref(false); // 添加这一行来定义 isDragging 变量
+const isDragging = ref(false); // 拖拽状态标志
+const printList = ref([]); // 存储待打印的SKU列表，每个元素包含SKU信息和数量
 
 
 const fileInput = ref(null);
@@ -394,7 +451,90 @@ function handleSkcGroupCheck(items, event) {
     });
 }
 
-// 3. 重构：generateBarcodes 基于 quantity > 0
+// 添加到待打印列表的方法
+function addToPrintList(items) {
+    // 只添加数量大于0的SKU
+    const itemsToAdd = items.filter(item => item.quantity > 0);
+    
+    if (itemsToAdd.length === 0) {
+        alert('请先设置要打印的SKU数量');
+        return;
+    }
+    
+    // 深拷贝要添加的项目，避免引用问题
+    itemsToAdd.forEach(item => {
+        // 检查是否已存在相同的SKU
+        const existingIndex = printList.value.findIndex(existing => existing.sku === item.sku);
+        
+        if (existingIndex >= 0) {
+            // 如果已存在，更新数量
+            printList.value[existingIndex].quantity = item.quantity;
+        } else {
+            // 否则添加新项目
+            printList.value.push({
+                ...item, // 复制所有属性
+                quantity: item.quantity // 确保数量正确
+            });
+        }
+    });
+    
+    alert(`已添加 ${itemsToAdd.length} 个SKU到待打印列表`);
+}
+
+// 从待打印列表中移除项目
+function removeFromPrintList(index) {
+    printList.value.splice(index, 1);
+}
+
+// 从待打印列表生成条码标签
+function generateBarcodesFromPrintList() {
+    if (printList.value.length === 0) {
+        alert('待打印列表为空，请先添加商品');
+        return;
+    }
+    
+    isProcessing.value = true;
+    progress.text = '正在准备标签数据...';
+    
+    setTimeout(() => {
+        const labels = [];
+        const finalPrintList = [];
+        
+        // 根据每个SKU的数量复制多份
+        printList.value.forEach(item => {
+            for (let i = 0; i < item.quantity; i++) {
+                finalPrintList.push(item);
+            }
+        });
+        
+        // 按颜色分组
+        const colorGroups = {};
+        finalPrintList.forEach(item => {
+            const colorKey = item.chineseColor || 'Uncategorized';
+            if (!colorGroups[colorKey]) {
+                colorGroups[colorKey] = [];
+            }
+            colorGroups[colorKey].push(item);
+        });
+        
+        // 生成标签，按颜色分组
+        const sortedColors = Object.keys(colorGroups).sort();
+        sortedColors.forEach((color, index) => {
+            if (index > 0) {
+                labels.push({ type: 'separator', color });
+            }
+            colorGroups[color].forEach(item => {
+                labels.push({ type: 'label', data: item });
+            });
+        });
+        
+        generatedLabels.value = labels;
+        progress.text = `预览生成完毕！共 ${labels.filter(l=>l.type==='label').length} 个标签。`;
+        isProcessing.value = false;
+    }, 100);
+}
+
+// 原始的generateBarcodes方法（保留但不再使用）
 function generateBarcodes() {
     const itemsToPrint = allData.value.filter(item => item.quantity > 0);
 
@@ -545,7 +685,7 @@ function clearFiltersAndSetZero() {
 }
 function triggerFileInput() { fileInput.value.click(); }
 function handleFileChange(event) { if (event.target.files.length) processFile(event.target.files[0]); }
-// 新增：计算已选SKC组数量
+// 计算已选SKC组数量
 const selectedSkcsCount = computed(() => {
   const selectedSkcSet = new Set();
   allData.value.forEach(item => {
@@ -554,6 +694,11 @@ const selectedSkcsCount = computed(() => {
     }
   });
   return selectedSkcSet.size;
+});
+
+// 计算待打印列表中的总标签数量
+const printListTotalCount = computed(() => {
+  return printList.value.reduce((total, item) => total + item.quantity, 0);
 });
 </script>
 
@@ -974,5 +1119,127 @@ body {
 
 .btn-small:hover {
     background: #764ba2;
+}
+
+/* 三列布局样式 */
+.three-column-layout {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.middle-column {
+    flex: 2;
+    min-width: 400px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* 待打印列表样式 */
+.print-list {
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.empty-list {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.print-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e9ecef;
+}
+
+.print-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9em;
+}
+
+.print-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.quantity-input-small {
+    width: 50px;
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.print-item-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-delete {
+    background: #dc3545;
+}
+
+.btn-delete:hover {
+    background: #c82333;
+}
+
+.btn-add {
+    background: #28a745;
+}
+
+.btn-add:hover {
+    background: #218838;
+}
+
+.print-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.print-total {
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .three-column-layout {
+        flex-direction: column;
+    }
+    
+    .column {
+        width: 100%;
+    }
 }
 </style>
