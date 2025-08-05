@@ -209,7 +209,38 @@ const filters = reactive({
 const progress = reactive({ value: 0, text: '' });
 
 
-// --- 计算属性 ---
+/**
+ * 重要提示：关于中文字体
+ * 默认的jsPDF不支持中文。为了显示中文，我们需要一个包含中文字形的.ttf字体文件。
+ * 1. 将一个中文字体文件（例如 微软雅黑 `msyh.ttf`）放到项目的 `public` 目录下。
+ * 例如，路径为 `public/fonts/msyh.ttf`
+ * 2. 下面的函数会通过URL加载这个字体文件，并注册到jsPDF中。
+ */
+let isFontLoaded = false;
+
+async function loadAndRegisterFont(pdf) {
+    if (isFontLoaded) return;
+
+    try {
+        progress.text = '首次加载中文字体...';
+        // 从 public 目录加载字体文件
+        const fontUrl = '/fonts/msyh.ttf'; 
+        const response = await fetch(fontUrl);
+        if (!response.ok) throw new Error(`字体文件加载失败: ${response.statusText}`);
+        const font = await response.arrayBuffer();
+        const fontBase64 = btoa(new Uint8Array(font).reduce((data, byte) => data + String.fromCharCode(byte), ''));
+
+        // 注册字体到 jsPDF
+        pdf.addFileToVFS('msyh.ttf', fontBase64);
+        pdf.addFont('msyh.ttf', 'msyh', 'normal');
+        isFontLoaded = true;
+    } catch (error) {
+        console.error("字体加载或注册失败:", error);
+        alert("中文字体加载失败，PDF中的中文可能无法显示。请检查public/fonts/msyh.ttf文件是否存在。");
+        // 即使失败，也标记为已尝试，避免重复加载
+        isFontLoaded = true; 
+    }
+}
 
 // 新增：计算需要打印的SKU总数和标签总数
 const stats = computed(() => {
@@ -401,7 +432,10 @@ async function downloadPDF() {
         unit: 'mm',
         format: [70, 20]
     });
-    pdf.setFont('helvetica');
+        // 确保中文字体已加载
+    //await loadAndRegisterFont(pdf);
+    pdf.setFont('helvetica',"bold");
+    //console.log(pdf.getFontList());
 
     const totalSteps = generatedLabels.value.length;
 
@@ -415,9 +449,9 @@ async function downloadPDF() {
         
         if (label.type === 'separator') {
             pdf.setFillColor(0, 0, 0);
-            pdf.rect(0, 0, 70, 20, 'F');
+            pdf.rect(3, 5, 60, 14, 'F');
             pdf.setTextColor(255, 255, 255);
-            pdf.setFontSize(12);
+            pdf.setFontSize(8);
             pdf.text(`Color Separator - ${label.color}`, 35, 11, { align: 'center' });
         } else {
             const item = label.data;
@@ -428,9 +462,9 @@ async function downloadPDF() {
             pdf.rect(2, 2, 66, 16);
             
             pdf.setTextColor(0, 0, 0);
-            pdf.setFontSize(6); 
-            pdf.text(item.skuCode, 3, 4); 
-            pdf.text(`${item.englishColor}-${item.size}`, 66, 4, { align: 'right' }); // 调整坐标
+            pdf.setFontSize(7); 
+            pdf.text(item.skuCode, 3, 5); 
+            pdf.text(`${item.englishColor}-${item.size}`, 66, 5, { align: 'right'}); // 调整坐标
 
             if (item.barcode) {
                 // --- 核心修复：使用canvas作为中介 ---
@@ -446,7 +480,7 @@ async function downloadPDF() {
                 pdf.addImage(barcodeImage, 'PNG', 7, 6, 58, 8); 
             }
 
-            pdf.setFontSize(6); 
+            pdf.setFontSize(7); 
             pdf.text(item.sku+"", 3, 17); 
             pdf.text('Made In China', 66, 17, { align: 'right' }); // 调整坐标
         }
