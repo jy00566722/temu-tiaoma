@@ -121,10 +121,11 @@
                 <div v-for="item in group.items" :key="item.sku" class="sku-item">
                     <div class="sku-info">
                         <span><strong>SKU:</strong> {{ item.sku }}</span>
+                        <span><strong>条码:</strong> {{ item.barcode }}</span>
                         <span><strong>货号:</strong> {{ item.skuCode }}</span>
                         <span><strong>颜色:</strong> {{ item.chineseColor }}</span>
                         <span><strong>尺码:</strong> {{ item.size }}</span>
-                        <span><strong>条码:</strong> {{ item.barcode }}</span>
+
                     </div>
                     <div class="sku-quantity">
                         <label>数量:</label>
@@ -255,9 +256,35 @@ const stats = computed(() => {
     return { skuToPrintCount, labelTotalCount };
 });
 
-const storeOptions = computed(() =>[...new Set(allData.value.map(item => item.storeCode).filter(Boolean))]);
-const colorOptions = computed(() => [...new Set(allData.value.map(item => item.chineseColor).filter(Boolean))]);
-const sizeOptions = computed(() => [...new Set(allData.value.map(item => item.size).filter(Boolean))]);
+// 店铺选项不变，始终显示所有店铺
+const storeOptions = computed(() => [...new Set(allData.value.map(item => item.storeCode).filter(Boolean))]);
+
+// 颜色选项根据已选店铺和SKC货号筛选
+const colorOptions = computed(() => {
+  // 先根据已选店铺和SKC货号筛选出符合条件的商品
+  const filteredByStoreAndSkc = allData.value.filter(item => {
+    const lowerSkcCode = filters.skcCode.toLowerCase();
+    return (!filters.storeCode || item.storeCode === filters.storeCode) &&
+           (!filters.skcCode || (item.skcCode && String(item.skcCode).toLowerCase().includes(lowerSkcCode)));
+  });
+  
+  // 从筛选结果中提取不重复的颜色选项
+  return [...new Set(filteredByStoreAndSkc.map(item => item.chineseColor).filter(Boolean))];
+});
+
+// 尺码选项根据已选店铺、SKC货号和颜色筛选
+const sizeOptions = computed(() => {
+  // 根据已选店铺、SKC货号和颜色筛选出符合条件的商品
+  const filteredByStoreAndSkcAndColor = allData.value.filter(item => {
+    const lowerSkcCode = filters.skcCode.toLowerCase();
+    return (!filters.storeCode || item.storeCode === filters.storeCode) &&
+           (!filters.skcCode || (item.skcCode && String(item.skcCode).toLowerCase().includes(lowerSkcCode))) &&
+           (!filters.chineseColor || item.chineseColor === filters.chineseColor);
+  });
+  
+  // 从筛选结果中提取不重复的尺码选项
+  return [...new Set(filteredByStoreAndSkcAndColor.map(item => item.size).filter(Boolean))];
+});
 
 // filteredAndGroupedData 逻辑保持，用于UI展示
 const filteredAndGroupedData = computed(() => {
@@ -496,21 +523,25 @@ async function downloadPDF() {
 function clearFilters() {
     filters.storeCode = ''; filters.skcCode = ''; filters.chineseColor = ''; filters.size = '';
 }
-// 新增：将所有已筛选的SKU数量设为0
+// 将所有已筛选的SKU数量设为0并清除选中状态
 function setAllToZero() {
     filteredAndGroupedData.value.forEach(group => {
         group.items.forEach(item => {
             item.quantity = 0;
         });
     });
+    // 清除所有SKC分组的展开状态
+    expandedSkcs.clear();
 }
 
-// 新增：清除筛选并将所有SKU数量设为0
+// 清除筛选并将所有SKU数量设为0并清除选中状态
 function clearFiltersAndSetZero() {
     clearFilters();
     allData.value.forEach(item => {
         item.quantity = 0;
     });
+    // 清除所有SKC分组的展开状态
+    expandedSkcs.clear();
 }
 function triggerFileInput() { fileInput.value.click(); }
 function handleFileChange(event) { if (event.target.files.length) processFile(event.target.files[0]); }
