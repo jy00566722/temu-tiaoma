@@ -147,7 +147,7 @@
                       <div v-for="item in group.items" :key="item.sku" class="sku-item">
                           <div class="sku-info">
                               <span><strong>SKU:</strong> {{ item.sku }}</span>
-                              <span><strong>条码:</strong> {{ item.barcode }}</span>
+                              <!-- <span><strong>条码:</strong> {{ item.barcode }}</span> -->
                               <span><strong>货号:</strong> {{ item.skuCode }}</span>
                               <span><strong>颜色:</strong> {{ item.chineseColor }}</span>
                               <span><strong>尺码:</strong> {{ item.size }}</span>
@@ -174,17 +174,17 @@
       <div class="column right-column">
         <template v-if="allData.length > 0">
           <div class="card">
-            <h3>🖨️ 待打印列表 ({{ printList.length }}个SKU)</h3>
+            <h3>🖨️ 待打印列表 ({{ printList.length }}个SKU)  <span class="btn-small" @click="clearPrintList"> 清空列表</span></h3>
             <div class="print-list">
               <div v-if="printList.length === 0" class="empty-list">
                 请从左侧添加商品到打印列表
               </div>
               <div v-for="(item, index) in printList" :key="index" class="print-item">
                 <div class="print-item-info">
-                  <div><strong>店铺:</strong> {{ item.storeCode }}</div>
-                  <div><strong>SKC:</strong> {{ item.skcCode }}</div>
-                  <div><strong>颜色:</strong> {{ item.chineseColor }}</div>
-                  <div><strong>尺码:</strong> {{ item.size }}</div>
+                  <div> {{ item.storeCode }}</div>
+                  <div> {{ item.skcCode }}</div>
+                  <div> {{ item.chineseColor }}</div>
+                  <div>{{ item.size }}</div>
                   <div class="print-item-quantity">
                     <strong>数量:</strong>
                     <input 
@@ -197,7 +197,7 @@
                 </div>
                 <div class="print-item-actions">
                   <button class="btn-small btn-delete" @click="removeFromPrintList(index)">
-                    删除
+                    del
                   </button>
                 </div>
               </div>
@@ -211,7 +211,7 @@
           </div>
 
           <div v-if="generatedLabels.length > 0" class="card">
-            <h3>👀 标签预览</h3>
+            <h3>👀 标签预览 <span class="btn-small" @click="clearGeneratedLabels"> 清空预览</span></h3>
             <div id="barcodePreview" ref="barcodePreviewContainer">
               <template v-for="(label, index) in generatedLabels" :key="index">
                 <div v-if="label.type === 'separator'" class="separator-page">
@@ -383,7 +383,14 @@ watch(generatedLabels, async (newLabels) => {
   });
 }, { deep: true });
 
-
+// 新增：清空打印列表方法
+function clearPrintList() {
+    printList.value = [];
+}
+// 新增：清空预览方法
+function clearGeneratedLabels() {
+    generatedLabels.value = [];
+}
 // 添加 handleDrop 函数
 function handleDrop(event) {
   isDragging.value = false;
@@ -721,7 +728,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 20px;
 }
@@ -1155,7 +1162,7 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .empty-list {
@@ -1168,17 +1175,21 @@ body {
 .print-item {
     background: #f8f9fa;
     border-radius: 8px;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #e9ecef;
+    gap: 2px;
 }
 
 .print-item-info {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2px;
     font-size: 0.9em;
 }
 
@@ -1186,7 +1197,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-top: 5px;
+    margin-top: 0px;
 }
 
 .quantity-input-small {
@@ -1199,7 +1210,7 @@ body {
 
 .print-item-actions {
     display: flex;
-    gap: 5px;
+    gap: 1px;
 }
 
 .btn-delete {
